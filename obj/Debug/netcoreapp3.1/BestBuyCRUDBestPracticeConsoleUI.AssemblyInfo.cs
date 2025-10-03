@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BestBuyCRUDBestPracticeConsoleUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62b3cf5d38a8d014f704503bf6343b70950d0d7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72fedeb8dfe816fe90b804cf20f8217dcefb6e1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BestBuyCRUDBestPracticeConsoleUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BestBuyCRUDBestPracticeConsoleUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

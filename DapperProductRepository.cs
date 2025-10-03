@@ -36,7 +36,7 @@ namespace BestBuyCRUDBestPracticeConsoleUI
         }
         public void UpdateProduct(Product product)//this can be done with as many or as few properties as desired, based on how the product class has been defined. For instance, you could just have this update product method only be capable of updating the product's name or ID.
         {
-            _connection.Execute("UPDATE products" + "SET Name = @name," + "Price = @price," + "OnSale = @onsale," + "StockLevel = @stock" + "WHERE ProductID = @id," + "CategoryID = @catID;",
+            _connection.Execute(" UPDATE products" + " SET Name = @name," + "Price = @price," + "OnSale = @onsale," + "StockLevel = @stock" + " WHERE ProductID = @id" + " AND CategoryID = @catID;",
                 new
                 {
                     name = product.Name,
