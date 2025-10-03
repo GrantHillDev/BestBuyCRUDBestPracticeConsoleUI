@@ -36,9 +36,9 @@ namespace BestBuyCRUDBestPracticeConsoleUI
         }
         public void UpdateProduct(Product product)//this can be done with as many or as few properties as desired, based on how the product class has been defined. For instance, you could just have this update product method only be capable of updating the product's name or ID.
         {
-            _connection.Execute(" UPDATE products" + " SET Name = @name," + "Price = @price," + "OnSale = @onsale," + "StockLevel = @stock" + " WHERE ProductID = @id" + " AND CategoryID = @catID;",
-                new
-                {
+            _connection.Execute(" UPDATE products" + " SET Name = @name," + "Price = @price," + "OnSale = @onsale," + "StockLevel = @stock" + " WHERE ProductID = @id" + " AND CategoryID = @catID;",//the runtime errors I'd initially faced were derived from this line of code. The reasons why were syntactic, but confusing, despite being unremarkably simple once figured out in the end. So, when executing lines of code such as this one, to be interpreted and run in other applications, in this case, MySQL, the syntax has to be perfect, or else errors will get thrown.
+                new//The errors that were thrown stemming from the original incorrect syntax in the line of code above were runtime based because VSC isn't designed to capacitate other systems of code or related languages, let alone at compile time, hence why if such code executed and is incorrectly syntaxed, then it will show up as a runtime error. In this case, the confusing part of fixing this code had to with how MySQL automatically assumes and places another blank space behind any commas written into any segment of this _connection.Execute function, whereas if no commas are written in, then parts of this execution need to have spaces manually input into the strings that don't have commas preceding them.
+                {//Trying to diagnose this issue within MySQL itself requires the removal of all quotation marks and plus signs, and that should be enough see any potential compile errors with the same line of code as expressed within MySQL (assuming this is copied and pasted into it). The intended programmed definitions from the same line above were written into C# here as strings that are connected by + signs, but they don't necessarily add spacing or any other value to the code itself being run in MySQL.
                     name = product.Name,
                     price = product.Price,
                     onsale = product.OnSale,

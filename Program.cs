@@ -11,7 +11,7 @@ namespace BestBuyCRUDBestPracticeConsoleUI//Remember to utilize the Alt + Enter 
 {
     internal class Program//a connection string is how a database authenticates a user.
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//still needs user prompts to see if they wish to update any products.
         {
             #region Configuration
             var config = new ConfigurationBuilder()
